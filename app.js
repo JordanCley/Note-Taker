@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const htmlRoutes = require("./routes/htmlRoutes.js");
+const apiRoutes = require("./routes/apiRoutes.js");
 
 // SETS PORT TO VAR
 const PORT = process.env.PORT || 3000;
@@ -10,9 +12,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// REQUIREING ROUTES
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
+app.use(express.static("public"));
+
+// REQUIRING ROUTES
+// require("./routes/apiRoutes.js")(app);
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
+// require("./routes/htmlRoutes.js")(app);
 
 
 // LISTENING FOR PORT
