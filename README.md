@@ -5,7 +5,7 @@ notes. This was my first application using routes witht the express framework.
 
 ## Node.js, Bootstrap, Express
 
-## Deployed URL [Note-Taker](https://jordancley.github.io/Note-Taker/)
+## Deployed URL [Note-Taker](https://afternoon-inlet-12328.herokuapp.com/)
 
 
 ![Note-Taker](Note-Taker.png)
