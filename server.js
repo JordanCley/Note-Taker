@@ -1,7 +1,6 @@
 // GLOBAL CONSTENTS
 const express = require("express");
 const app = express();
-const fs = require("fs");
 const htmlRoutes = require("./routes/htmlRoutes.js");
 const apiRoutes = require("./routes/apiRoutes.js");
 
